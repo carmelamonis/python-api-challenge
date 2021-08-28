@@ -41,13 +41,13 @@ Final notebook:
 
 ### Part II - VacationPy
 
- Use jupyter-gmaps and the Google Places API for this part of the assignment.
+ I used jupyter-gmaps and the Google Places API for the following:
 
 
 * Create a heat map that displays the humidity for every city from Part I.
 
   ![heatmap](Images/heatmap.png)
 
-* Narrow down the DataFrame to find your ideal weather condition. 
+* Narrow down the DataFrame to find my ideal weather condition. 
 
   ![hotel map](Images/hotel_map.png)
