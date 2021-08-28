@@ -4,7 +4,7 @@
 
 How does the weather change as we move closer to the equator?
 
-![Equator](Images/equatorsign.png)
+![Equator](equatorsign.png)
 
 
 ## Part I - WeatherPy
@@ -46,8 +46,8 @@ Final notebook:
 
 * Create a heat map that displays the humidity for every city from Part I.
 
-  ![heatmap](Images/heatmap.png)
+  ![heatmap](heatmap.png)
 
 * Narrow down the DataFrame to find my ideal weather condition. 
 
-  ![hotel map](Images/hotel_map.png)
+  ![hotel map](hotel_map.png)
