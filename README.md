@@ -28,6 +28,8 @@ Then I ran linear regression on each relationship. I separated the plots into No
  - Northern Hemisphere - Wind Speed (mph) vs. Latitude
  - Southern Hemisphere - Wind Speed (mph) vs. Latitude
 
+![Linear Regression Example](WeatherPy/linear.png)
+
 After each pair of plots, an explanation of what the linear regression is modeling is noted within the Jupyter Notebook.
 
 Given the results from original analysis, I took it a step further to display on a map hotels with their city and country information given my prefered weather conditions.
