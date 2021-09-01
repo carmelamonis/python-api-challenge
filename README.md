@@ -1,53 +1,35 @@
-# Python API - What's the Weather Like?
+## Summary
 
-## Background
+Although it may be obvious, how exactly does the weather change as we move closer to the equator? With the use of thee [OpenWeatherMap API](https://openweathermap.org/api), we can use the weather data from 500+ cities around the world for analysis. 
 
-How does the weather change as we move closer to the equator?
+## Scope
 
-![Equator](equatorsign.png)
+I used Jupyter Notebook and Pandas in order to load in data from the OpenWeatherMap API and created a Pandas DataFrame with that information.
 
+![DataFrame Preview](WeatherPy/dataframe.png)
 
-## Part I - WeatherPy
+The next step was to create a series of scatter plots to showcase the following relationships:
 
-To answer this question, I visualized the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, I utilized a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
+ - Temperature (F) vs. Latitude
+ - Humidity (%) vs. Latitude
+ - Cloudiness (%) vs. Latitude
+ - Wind Speed (mph) vs. Latitude
 
-First step was to create a series of scatter plots to showcase the following relationships:
+![Lat vs Temp](WeatherPy/lat_vs_temp.png)
 
-* Temperature (F) vs. Latitude
-* Humidity (%) vs. Latitude
-* Cloudiness (%) vs. Latitude
-* Wind Speed (mph) vs. Latitude
+Then I ran linear regression on each relationship. I separated the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
 
+ - Northern Hemisphere - Temperature (F) vs. Latitude
+ - Southern Hemisphere - Temperature (F) vs. Latitude
+ - Northern Hemisphere - Humidity (%) vs. Latitude
+ - Southern Hemisphere - Humidity (%) vs. Latitude
+ - Northern Hemisphere - Cloudiness (%) vs. Latitude
+ - Southern Hemisphere - Cloudiness (%) vs. Latitude
+ - Northern Hemisphere - Wind Speed (mph) vs. Latitude
+ - Southern Hemisphere - Wind Speed (mph) vs. Latitude
 
-The second step was to run linear regression on each relationship. I separated the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
+After each pair of plots, an explanation of what the linear regression is modeling is noted within the Jupyter Notebook.
 
-* Northern Hemisphere - Temperature (F) vs. Latitude
-* Southern Hemisphere - Temperature (F) vs. Latitude
-* Northern Hemisphere - Humidity (%) vs. Latitude
-* Southern Hemisphere - Humidity (%) vs. Latitude
-* Northern Hemisphere - Cloudiness (%) vs. Latitude
-* Southern Hemisphere - Cloudiness (%) vs. Latitude
-* Northern Hemisphere - Wind Speed (mph) vs. Latitude
-* Southern Hemisphere - Wind Speed (mph) vs. Latitude
+Given the results from original analysis, I took it a step further to display on a map hotels with their city and country information given my prefered weather conditions.
 
-After each pair of plots, an explanation of what the linear regression is modeling is noted.
-
-Final notebook:
-
-* Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
-* Perform a weather check on each of the cities using a series of successive API calls.
-* Include a print log of each city as it's being processed with the city number and city name.
-* Save a CSV of all retrieved data and a PNG image for each scatter plot.
-
-### Part II - VacationPy
-
- I used jupyter-gmaps and the Google Places API for the following:
-
-
-* Create a heat map that displays the humidity for every city from Part I.
-
-  ![heatmap](heatmap.png)
-
-* Narrow down the DataFrame to find my ideal weather condition. 
-
-  ![hotel map](hotel_map.png)
+![Hotel Info](VacationPy/Map2.png)
